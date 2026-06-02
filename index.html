@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ShopVault - Modern E-Commerce Product Catalog by Pranav Vaidhya" />
+  <meta name="author" content="Pranav Vaidhya" />
+  <title>ShopVault - Product Catalog</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+      <a href="#/" class="nav-brand" data-route="/"><span class="brand-icon">SV</span><span class="brand-name">ShopVault</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#/" class="nav-link" data-route="/">Home</a>
+        <a href="#/products" class="nav-link" data-route="/products">Products</a>
+        <a href="#/categories" class="nav-link" data-route="/categories">Categories</a>
+        <a href="#/about" class="nav-link" data-route="/about">About</a>
+        <a href="#/contact" class="nav-link" data-route="/contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" id="navSearchBtn" aria-label="Search">&#128269;</button>
+        <button class="nav-icon-btn" id="navWishlistBtn" aria-label="Wishlist" data-route="/wishlist">&#9825;<span class="badge" id="wishlistBadge">0</span></button>
+        <button class="nav-icon-btn cart-btn" id="navCartBtn" aria-label="Cart" data-route="/cart">&#128722;<span class="badge" id="cartBadge">0</span></button>
+        <button class="nav-icon-btn" id="themeBtn" aria-label="Toggle theme">&#9680;</button>
+        <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="search-bar-wrap hidden" id="searchBarWrap">
+      <div class="nav-container">
+        <div class="search-bar">
+          <input type="text" id="globalSearch" class="search-input" placeholder="Search products..." autocomplete="off" aria-label="Search products" />
+          <button class="search-close" id="searchClose" aria-label="Close search">x</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="app" role="main" tabindex="-1"></main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="nav-brand"><span class="brand-icon">SV</span><span class="brand-name">ShopVault</span></div>
+          <p>A modern e-commerce product catalog showcasing full-stack frontend architecture, client-side routing, and production-ready deployment.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h3 class="footer-heading">Pages</h3>
+          <ul>
+            <li><a href="#/" data-route="/">Home</a></li>
+            <li><a href="#/products" data-route="/products">Products</a></li>
+            <li><a href="#/categories" data-route="/categories">Categories</a></li>
+            <li><a href="#/about" data-route="/about">About</a></li>
+            <li><a href="#/contact" data-route="/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-info">
+          <h3 class="footer-heading">Developer</h3>
+          <p><strong>Pranav Vaidhya</strong></p>
+          <p>Frontend Developer Intern</p>
+          <p>Built with HTML, CSS, JavaScript</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>2026 <strong>Pranav Vaidhya</strong> - ShopVault Internship Capstone Project.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/router.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
